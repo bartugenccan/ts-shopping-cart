@@ -21,7 +21,7 @@ const Cart: React.FC<Props> = ({ cartItems, addToCart, removeFromCart }) => {
   };
 
   return (
-    <div className="p-5 flex flex-col justify-center items-center text-center">
+    <div className="p-5 flex flex-col justify-center items-center ">
       <h2 className="text-2xl">Your Shopping Cart</h2>
       {cartItems.length === 0 ? (
         <p className="text-lg">Your cart is empty</p>
@@ -34,7 +34,9 @@ const Cart: React.FC<Props> = ({ cartItems, addToCart, removeFromCart }) => {
           removeFromCart={removeFromCart}
         />
       ))}
-      <h2 className="text-2xl">Total ${calculateTotal(cartItems).toFixed(2)}</h2>
+      <h2 className="text-2xl mt-3">
+        Total ${calculateTotal(cartItems).toFixed(2)}
+      </h2>
     </div>
   );
 };

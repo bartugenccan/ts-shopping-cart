@@ -14,14 +14,14 @@ interface Props {
 
 const CartItem: React.FC<Props> = ({ item, addToCart, removeFromCart }) => {
   return (
-    <div className="flex justify-between font-arial border-b-2 pb-5">
-      <div className="flex-1">
+    <div className=" flex justify-between items-center font-arial border-b-2 pb-5 w-full mt-2">
+      <div className="flex flex-col justify-center items-center w-full">
         <h3> {item.title} </h3>
-        <div className="flex justify-between">
+        <div className="flex justify-around items-center mb-2">
           <p>Price: ${item.price}</p>
           <p> Total: ${(item.amount * item.price).toFixed(2)} </p>
         </div>
-        <div className="flex justify-between">
+        <div className="flex justify-evenly items-center w-full">
           <Button
             size="small"
             disableElevation
